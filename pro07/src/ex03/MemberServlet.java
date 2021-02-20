@@ -1,4 +1,4 @@
-package ex02;
+package ex03;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,13 +12,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import ex02.MemberVO;
-import ex02.MemberDAO;
+import ex03.MemberVO;
+import ex03.MemberDAO;
 
 /**
  * Servlet implementation class MemberServlet
  */
-@WebServlet("/member3")
+@WebServlet("/member2")
 public class MemberServlet extends HttpServlet {
 	
 
