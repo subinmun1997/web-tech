@@ -1,8 +1,8 @@
-package ex05;
+package ex07;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -12,10 +12,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class SecondServlet
+ * Servlet implementation class FirstServlet
  */
-//@WebServlet("/second")
-public class SecondServlet extends HttpServlet {
+@WebServlet("/first")
+public class FirstServlet extends HttpServlet {
+
 	/**
 	 * @see Servlet#init(ServletConfig)
 	 */
@@ -37,14 +38,11 @@ public class SecondServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
-		String name = request.getParameter("name");
-		PrintWriter out = response.getWriter();
-		out.println("<html><body>");
-		out.println("이름:"+name);
-		out.println("<br>");
-		out.println("dispatch를 이용한 forward 실습입니다.");
-		out.println("</body></html>");
+		request.setAttribute("address", "서울시 성북구");
+		RequestDispatcher dispatch = request.getRequestDispatcher("second");
+		dispatch.forward(request, response);
 	}
 
 }
