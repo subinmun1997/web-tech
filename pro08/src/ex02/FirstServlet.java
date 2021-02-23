@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class FirstServlet
  */
-@WebServlet("/first")
+//@WebServlet("/first")
 public class FirstServlet extends HttpServlet {
 	/**
 	 * @see Servlet#init(ServletConfig)
